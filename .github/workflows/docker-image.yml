@@ -21,8 +21,8 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/dockerfile-practice .
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/dockerfile-practice:latest .
 
       - name: Push Docker image
         run: |
-          docker push ${{ secrets.DOCKER_USERNAME }}/dockerfile-practice
+          docker push ${{ secrets.DOCKER_USERNAME }}/dockerfile-practice:latest
